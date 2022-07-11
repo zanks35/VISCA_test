@@ -13,7 +13,7 @@ class Port():
         # print(2)
         # com = input('输入端口号：')
         parser = argparse.ArgumentParser(description='输入端口号')
-        parser.add_argument("--COM", type=str, default="com3")
+        parser.add_argument("--COM", type=str, default="com4")
         args = parser.parse_args()
         port = args.COM
         self.port = serial.Serial(port=port, baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.08)

@@ -13,8 +13,7 @@ zoom_position_4000 = [0X81, 0x01, 0x04, 0x47, 0x04, 0x00, 0x00, 0x00, 0xff]  # Z
 zoom_position_2000 = [0X81, 0x01, 0x04, 0x47, 0x02, 0x00, 0x00, 0x00, 0xff]  # ZOOM 直接到达指定位置:2000
 zoom_position_0000 = [0X81, 0x01, 0x04, 0x47, 0x00, 0x00, 0x00, 0x00, 0xff]  # ZOOM 直接到达指定位置:0000
 focus_3bdf = [0X81, 0x01, 0x04, 0x48, 0x03, 0x0b, 0x0d, 0x0f, 0xff]                                   # FOCUS 直接到指定位置
-focus_4BDF = [0X81, 0x01, 0x04, 0x48, 0x04, 0x0B, 0x0D, 0x0F, 0xff]                              # FOCUS 直接到指定位置
-focus_5494 = [0X81, 0x01, 0x04, 0x48, 0x05, 0x04, 0x09, 0x04, 0xff]
+focus_4778 = [0X81, 0x01, 0x04, 0x48, 0x04, 0x07, 0x07, 0x08, 0xff]                              # FOCUS 直接到指定位置
 focus_far_standard = [0X81, 0x01, 0x04, 0x08, 0x02, 0xff]                                                     # FOCUS 定速far
 focus_near_standard = [0X81, 0x01, 0x04, 0x08, 0x03, 0xff]                                                     # FOCUS 定速near
 focus_far_0 = [0X81, 0x01, 0x04, 0x08, 0x20, 0xff]                                                   # FOCUS 变速速far:0
@@ -31,7 +30,7 @@ WB_indoor = [0x81, 0x01, 0x04, 0x35, 0x01, 0xFF]                                
 WB_outdoor = [0x81, 0x01, 0x04, 0x35, 0x02, 0xFF]                                                   # 白平衡 户外
 WB_one_push = [0x81, 0x01, 0x04, 0x35, 0x03, 0xFF]                                                     # 白平衡一键白平衡
 WB_AWB = [0x81, 0x01, 0x04, 0x35, 0x05, 0xFF]                                                   # 白平衡AWB
-Color_Temperature = [0x81, 0x01, 0x04, 0x35, 0x0b, 0xFF]                                                   # Color_Temperature
+WB_ATW = [0x81, 0x01, 0x04, 0x35, 0x04, 0xFF]                                                   # Color_Temperature
 WB_sodium_lamp = [0x81, 0x01, 0x04, 0x35, 0x0C, 0xFF]                                                   # 白平衡钠灯
 WB_one_push_trigger = [0x81, 0x01, 0x04, 0x10, 0x05, 0xFF]                                                   # 白平衡one push trigger
 WB_R_Gain_default = [0x81, 0x01, 0x04, 0x03, 0x00, 0xFF]                                                     # 白平衡 RGAIN恢复默认
@@ -70,7 +69,7 @@ exposure_manual = [0x81, 0x01, 0x04, 0x39, 0x03, 0xFF]                          
 exposure_iris = [0x81, 0x01, 0x04, 0x39, 0x0B, 0xFF]                                                     # 设置光圈优先模式
 exposure_shutter = [0x81, 0x01, 0x04, 0x39, 0x0A, 0xFF]                                                     # 设置快门优先模式
 exposure_white_board = [0x81, 0x01, 0x04, 0x39, 0x5F, 0xFF]                                                     # 设置白板模式
-exposure_bright = [0x81, 0x01, 0x04, 0x39, 0x0D, 0xFF]                                                     # 设置亮度优先模式
+# exposure_bright = [0x81, 0x01, 0x04, 0x39, 0x0D, 0xFF]                                                     # 设置亮度优先模式
 exposure_Quire = [0x81, 0x09, 0x04, 0x39, 0xFF]                                                           # 曝光模式查询命令
 
 exposure_shutter_default = [0x81, 0x01, 0x04, 0x0A, 0x00,0xFF]                                                      # 快门数值恢复默认
@@ -79,7 +78,7 @@ exposure_shutter_down = [0x81, 0x01, 0x04, 0x0A, 0x03, 0xFF]                    
 exposure_shutter_Quire = [0x81, 0x09, 0x04, 0x4A, 0xFF]                                                           #快门数值查询
 exposure_shutter_1_90 = [0x81, 0x01, 0x04, 0x4A,0x00, 0x00,0x00,0x07,0xFF]                                       # 快门直接调整到：0
 exposure_shutter_1_60 = [0x81, 0x01, 0x04, 0x4A,0x00, 0x00,0x00,0x06,0xFF]                                       # 快门直接调整到：0
-exposure_shutter_1_10000 = [0x81, 0x01, 0x04, 0x4A,0x00, 0x00,0x01,0x05,0xFF]                                       # 快门直接调整到：0
+exposure_shutter_1_10000 = [0x81, 0x01, 0x04, 0x4A,0x00, 0x00,0x00,0x00,0xFF]                                       # 快门直接调整到：0
 
 exposure_iris_Quire = [0x81, 0x09, 0x04, 0x4B, 0xFF]                                                            #光圈数值查询
 exposure_iris_default = [0x81, 0x01, 0x04, 0x0B,0x00,0xFF]                                                        #光圈恢复默认值
@@ -103,7 +102,7 @@ exposure_Gain_default = [0x81, 0x01, 0x04, 0x0C, 0x00,0xFF]                     
 exposure_Gain_0 = [0x81, 0x01, 0x04, 0x4C, 0x00,0x00,0x00,0x00,0xFF]                                          #曝光增益数值到指定位置：0
 exposure_Gain_14 = [0x81, 0x01, 0x04, 0x4C, 0x00,0x00,0x00,0x0E,0xFF]                                          #曝光增益数值到指定位置：14
 exposure_Gain_8 = [0x81, 0x01, 0x04, 0x4C, 0x00,0x00,0x00,0x08,0xFF]                                          #曝光增益数值到指定位置：8
-exposure_Gain_32 = [0x81, 0x01, 0x04, 0x4C, 0x00,0x00,0x02,0x00,0xFF]                                          #曝光增益数值到指定位置：32
+exposure_Gain_30 = [0x81, 0x01, 0x04, 0x4C, 0x00,0x00,0x00,0x1E,0xFF]                                          #曝光增益数值到指定位置：32
 
 ExpComp_on= [0x81, 0x01, 0x04, 0x3E, 0x02, 0xFF]                                                        #曝光补偿打开
 ExpComp_off= [0x81, 0x01, 0x04, 0x3E, 0x03, 0xFF]                                                       #曝光补偿关闭
@@ -137,27 +136,30 @@ CAM_2DNR_Quire =[0x81, 0x09, 0x04, 0x53, 0xFF]                #2DNR值查询
 CAM_2DNR_0ff =[0x81, 0x01, 0x04, 0x53, 0x00,0xFF]                #2DNR关闭
 CAM_2DNR_1 =[0x81, 0x01, 0x04, 0x53, 0x01,0xFF]                #2DNR值为1
 CAM_2DNR_2 =[0x81, 0x01, 0x04, 0x53, 0x02,0xFF]                #2DNR值为2
-CAM_2DNR_7 =[0x81, 0x01, 0x04, 0x53, 0x07,0xFF]                #2DNR值为7
+CAM_2DNR_3 =[0x81, 0x01, 0x04, 0x53, 0x03,0xFF]                #2DNR值为3
 
 CAM_3DNR_Quire =[0x81, 0x09, 0x04, 0x54, 0xFF]                 #3DNR值查询
 CAM_3DNR_0ff =[0x81, 0x01, 0x04, 0x54, 0x00,0xFF]              #3DNR关闭
 CAM_3DNR_1 =[0x81, 0x01, 0x04, 0x54, 0x01,0xFF]                #3DNR值为1
 CAM_3DNR_2 =[0x81, 0x01, 0x04, 0x54, 0x02,0xFF]                #3DNR值为2
-CAM_3DNR_7 =[0x81, 0x01, 0x04, 0x54, 0x07,0xFF]                #3DNR值为7
+CAM_3DNR_3 =[0x81, 0x01, 0x04, 0x54, 0x03,0xFF]                #3DNR值为7
 
-clear_0 = [0x81,0x01,0x04,0x3f,0x00,0x00,0xff]                                                       # 清除0预置位
-set_0 = [0x81,0x01,0x04,0x3f,0x01,0x00,0xff]                                                       # 设置0预置位
-call_0 = [0x81,0x01,0x04,0x3f,0x02,0x00,0xff]                                                       # 调用0预置位
-clear_1 = [0x81,0x01,0x04,0x3f,0x00,0x01,0xff]                                                       # 清除1预置位
-set_1 = [0x81,0x01,0x04,0x3f,0x01,0x01,0xff]                                                       # 设置1预置位
-call_1 = [0x81,0x01,0x04,0x3f,0x02,0x01,0xff]                                                       # 调用1预置位
-clear_15 = [0x81,0x01,0x04,0x3f,0x00,0x0f,0xff]                                                       # 清除15预置位
-set_15 = [0x81,0x01,0x04,0x3f,0x01,0x0f,0xff]                                                       # 设置15预置位
-call_15 = [0x81,0x01,0x04,0x3f,0x02,0x0f,0xff]                                                       # 调用15预置位
-clear_255 = [0x81,0x01,0x04,0x3f,0x00,0xff,0xff]                                                       # 清除255预置位
-set_255 = [0x81,0x01,0x04,0x3f,0x01,0xff,0xff]                                                       # 设置255预置位
-call_255 = [0x81,0x01,0x04,0x3f,0x02,0xff,0xff]                                                       # 调用255预置位
+clear_0 =   [0x81,0x01,0x04,0x3f,0x00,0x00,0xff]                                                       # 清除0预置位
+set_0 =     [0x81,0x01,0x04,0x3f,0x01,0x00,0xff]                                                       # 设置0预置位
+call_0 =    [0x81,0x01,0x04,0x3f,0x02,0x00,0xff]                                                       # 调用0预置位
+clear_1 =   [0x81,0x01,0x04,0x3f,0x00,0x01,0xff]                                                       # 清除1预置位
+set_1 =     [0x81,0x01,0x04,0x3f,0x01,0x01,0xff]                                                       # 设置1预置位
+call_1 =    [0x81,0x01,0x04,0x3f,0x02,0x01,0xff]                                                       # 调用1预置位
+clear_127 = [0x81,0x01,0x04,0x3f,0x00,0x7f,0xff]                                                       # 清除127预置位
+set_127 =   [0x81,0x01,0x04,0x3f,0x01,0x7f,0xff]                                                       # 设置127预置位
+call_127 =  [0x81,0x01,0x04,0x3f,0x02,0x7f,0xff]                                                       # 调用127预置位
 
+clear_128 = [0x81,0x01,0x04,0x3f,0x10,0x00,0xff]                                                       # 清除128预置位
+set_128 =   [0x81,0x01,0x04,0x3f,0x11,0x00,0xff]                                                       # 设置128预置位
+call_128 =  [0x81,0x01,0x04,0x3f,0x12,0x00,0xff]                                                       # 调用128预置位
+clear_255 = [0x81,0x01,0x04,0x3f,0x10,0x7f,0xff]                                                       # 清除255预置位
+set_255 =   [0x81,0x01,0x04,0x3f,0x11,0xff,0x7f]                                                       # 设置255预置位
+call_255 =  [0x81,0x01,0x04,0x3f,0x12,0xff,0x7f]                                                       # 调用255预置位
 
 data_up = [0X81, 0x01, 0x06, 0x01, 0x05, 0x05, 0x03, 0x01, 0xff]  # 云台向上，速度：5，5
 data_down = [0X81, 0x01, 0x06, 0x01, 0x05, 0x05, 0x03, 0x02, 0xff]  # 云台向下，速度：5，5
@@ -168,24 +170,23 @@ PT_UpLeft = [0X81, 0x01, 0x06, 0x01, 0x05, 0x05, 0x01, 0x01, 0xff]  # 云台左�
 PT_UpRight = [0X81, 0x01, 0x06, 0x01, 0x05, 0x05, 0x02, 0x01, 0xff]  # 云台右上，速度：5，5
 PT_DownLeft = [0X81, 0x01, 0x06, 0x01, 0x05, 0x05, 0x01, 0x02, 0xff]  # 云台左下，速度：5，5
 PT_DownRight = [0X81, 0x01, 0x06, 0x01, 0x05, 0x05, 0x02, 0x02, 0xff]  # 云台右下，速度：5，5
-PT_absolute = [0X81, 0x01, 0x06, 0x02, 0x05, 0x05, 0x02, 0x02,0x02, 0x02,0x02, 0x02,0x02, 0x02, 0xff]  # 云台右下，速度：5，5
-PT_relative = [0X81, 0x01, 0x06, 0x03, 0x05, 0x05, 0x02, 0x02,0x02, 0x02,0x02, 0x02,0x02, 0x02, 0xff]  # 云台右下，速度：5，5
+PT_absolute = [0X81, 0x01, 0x06, 0x02, 0x05, 0x05, 0x00, 0x09, 0x09, 0x00, 0x00, 0x05, 0x01, 0x00, 0xff]  # 云台右下，速度：5，5
+PT_relative = [0X81, 0x01, 0x06, 0x03, 0x05, 0x05, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0xff]  # 云台右下，速度：5，5
 
 video_format_quire = [0x81, 0x09, 0x06, 0x23, 0xFF]                                                           # 视频格式查询命令
-video_format_1080p60 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x00, 0xFF]                                               # 视频格式设置：1080p60
-video_format_1080p30 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x01, 0xFF]                                               # 视频格式设置：1080p30
-video_format_1080i60 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x02, 0xFF]                                               # 视频格式设置：1080i60
-video_format_720p60 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x03, 0xFF]                                               # 视频格式设置：720p60
-video_format_720p30 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x04, 0xFF]                                               # 视频格式设置：720p30
-video_format_4kp60 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x06, 0xFF]                                               # 视频格式设置：4kp60
-video_format_4kp30 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x07, 0xFF]                                               # 视频格式设置：4kp30
-video_format_1080p50 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x08, 0xFF]                                               # 视频格式设置：1080p50
-video_format_1080p25 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x09, 0xFF]                                               # 视频格式设置：1080p25
-video_format_1080i50 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0A, 0xFF]                                               # 视频格式设置：1080i50
-video_format_720p50 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0B, 0xFF]                                               # 视频格式设置：720p50
-video_format_720p25 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0C, 0xFF]                                               # 视频格式设置：720p25
-video_format_4Kp50 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0E, 0xFF]                                               # 视频格式设置：4Kp50
-video_format_4Kp25 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0F, 0xFF]                                               # 视频格式设置：4Kp25
+video_format_1080p60 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x07, 0xFF]                                               # 视频格式设置：1080p60
+video_format_1080p30 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0A, 0xFF]                                               # 视频格式设置：1080p30
+# video_format_1080i60 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x02, 0xFF]                                               # 视频格式设置：1080i60
+video_format_720p60 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0D, 0xFF]                                               # 视频格式设置：720p60
+# video_format_720p30 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x04, 0xFF]                                               # 视频格式设置：720p30
+# video_format_4kp30 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x07, 0xFF]                                               # 视频格式设置：4kp30
+video_format_1080p50 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x09, 0xFF]                                               # 视频格式设置：1080p50
+video_format_1080p25 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0C, 0xFF]                                               # 视频格式设置：1080p25
+# video_format_1080i50 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0A, 0xFF]                                               # 视频格式设置：1080i50
+video_format_720p50 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0F, 0xFF]                                               # 视频格式设置：720p50
+# video_format_720p25 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0C, 0xFF]                                               # 视频格式设置：720p25
+# video_format_4Kp50 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0E, 0xFF]                                               # 视频格式设置：4Kp50
+# video_format_4Kp25 = [0x81, 0x01, 0x06, 0x35, 0x00, 0x0F, 0xFF]                                               # 视频格式设置：4Kp25
 
 set_IP = [0x81, 0x01, 0x08, 0x07, 0x09,  0xFF]
 
@@ -207,14 +208,14 @@ set_IP_getway_10_0_8_1 = [0x81, 0x01, 0x08, 0x07, 0x03, 0x00, 0x0a, 0x00, 0x00, 
 zoom_list = [(zoom_t_standard,'zoom_t_standard'),(zoom_w_standard,'zoom_w_standard'),(zoom_t_variable_0,'zoom_t_variable_0'),(zoom_t_variable_7,'zoom_t_variable_7'),(zoom_t_variable_5,'zoom_t_variable_5'),(zoom_w_variable_0,'zoom_w_variable_0'),(zoom_w_variable_7,'zoom_w_variable_7'),(zoom_w_variable_5,'zoom_w_variable_5')]
 focus_list = [(focus_far_standard,'focus_far_standard'), (focus_near_standard,'focus_near_standard'), (focus_far_0,'focus_far_0'),
               (focus_far_7,'focus_far_7'), (focus_far_5,'focus_far_5'),(focus_near_0,'focus_near_0'), (focus_near_7,'focus_near_7'),
-              (focus_near_5,'focus_near_5'), (focus_3bdf,'focus_3bdf'), (focus_4BDF,'focus_4BDF'), (focus_5494,'focus_5494')]
-WB_list = [WB_auto,WB_indoor,WB_outdoor,WB_one_push,WB_AWB,Color_Temperature,WB_sodium_lamp]
+              (focus_near_5,'focus_near_5'), (focus_3bdf,'focus_3bdf'), (focus_4778,'focus_74778')]
+WB_list = [WB_auto,WB_indoor,WB_outdoor,WB_one_push,WB_AWB,WB_ATW,WB_sodium_lamp]
 WB_return_list = [['0x90', '0x50', '0x0', '0xff'],
                   ['0x90', '0x50', '0x1', '0xff'],
                   ['0x90', '0x50', '0x2', '0xff'],
                   ['0x90', '0x50', '0x3', '0xff'],
                   ['0x90', '0x50', '0x5', '0xff'],
-                  ['0x90', '0x50', '0xb', '0xff'],
+                  ['0x90', '0x50', '0x4', '0xff'],
                   ['0x90', '0x50', '0xc', '0xff']
                   ]
 WB_title_list = [(WB_list[0],WB_return_list[0],'WB_auto'),
@@ -222,17 +223,18 @@ WB_title_list = [(WB_list[0],WB_return_list[0],'WB_auto'),
                  (WB_list[2],WB_return_list[2],'WB_outdoor'),
                  (WB_list[3],WB_return_list[3],'WB_one_push'),
                  (WB_list[4],WB_return_list[4],'WB_AWB'),
-                 (WB_list[5],WB_return_list[5],'Color_Temperature'),
+                 (WB_list[5],WB_return_list[5],'WB_ATW'),
                  (WB_list[6],WB_return_list[6],'WB_sodium_lamp')]
-exposure_list = [exposure_auto,exposure_manual,exposure_iris,exposure_shutter,exposure_bright]
-exposure_return_list = [['0x90', '0x50', '0x0', '0xff'],['0x90', '0x50', '0x3', '0xff'],['0x90', '0x50', '0xb', '0xff'],['0x90', '0x50', '0xa', '0xff'],['0x90', '0x50', '0xd', '0xff']]
-video_format_return_list = [['0x90', '0x50', '0x0', '0xff'],['0x90', '0x50','0x1', '0xff'],
-                            ['0x90', '0x50', '0x2', '0xff'],['0x90', '0x50','0x3', '0xff'],
-                            ['0x90', '0x50', '0x4', '0xff'],['0x90', '0x50', '0x6', '0xff'],
-                            ['0x90', '0x50', '0x7', '0xff'],['0x90', '0x50','0x8', '0xff'],
-                            ['0x90', '0x50', '0x9', '0xff'],['0x90', '0x50','0xa', '0xff'],
-                            ['0x90', '0x50', '0xb', '0xff'],['0x90', '0x50','0xc', '0xff'],
-                            ['0x90', '0x50', '0xe', '0xff'],['0x90', '0x50','0xf', '0xff']
+exposure_list = [exposure_auto,exposure_manual,exposure_iris,exposure_shutter,exposure_white_board]
+exposure_return_list = [['0x90', '0x50', '0x0', '0xff'],['0x90', '0x50', '0x3', '0xff'],['0x90', '0x50', '0xb', '0xff'],['0x90', '0x50', '0xa', '0xff'],['0x90', '0x50', '0x5f', '0xff']]
+video_format_return_list = [['0x90', '0x50', '0x0', '0x0', '0xff'],['0x90', '0x50', '0x0', '0x1', '0xff'],
+                            ['0x90', '0x50', '0x0', '0x2', '0xff'],['0x90', '0x50', '0x0', '0x3', '0xff'],
+                            ['0x90', '0x50', '0x0', '0x4', '0xff'],['0x90', '0x50', '0x0', '0x5', '0xff'],
+                            ['0x90', '0x50', '0x0', '0x6', '0xff'],['0x90', '0x50', '0x0', '0x7', '0xff'],
+                            ['0x90', '0x50', '0x0', '0x8', '0xff'],['0x90', '0x50', '0x0', '0x9', '0xff'],
+                            ['0x90', '0x50', '0x0', '0xa', '0xff'],['0x90', '0x50', '0x0', '0xb', '0xff'],
+                            ['0x90', '0x50', '0x0', '0xc', '0xff'],['0x90', '0x50', '0x0', '0xd', '0xff'],
+                            ['0x90', '0x50', '0x0', '0xe', '0xff'],['0x90', '0x50', '0x0', '0xf', '0xff']
                             ]
 @allure.feature("visca命令测试")
 
@@ -374,7 +376,6 @@ class Test_visca():
     @pytest.mark.parametrize('bright_value,title', [(exposure_bright_up,'exposure_bright_up'),
                                                     (exposure_bright_down,'exposure_bright_down'),
                                                     (exposure_bright_0,'exposure_bright_0'),
-                                                    (exposure_bright_27,'exposure_bright_27'),
                                                     (exposure_bright_15,'exposure_bright_15')])
     def test_visca_exposure_bright(self,bright_value,title):
         test_bright_reslut = PT.Visca().visca_exposure_bright(bright_value)
@@ -406,7 +407,7 @@ class Test_visca():
                                                      (exposure_Gain_down,'exposure_Gain_down'),
                                                      (exposure_Gain_0,'exposure_Gain_0'),
                                                      (exposure_Gain_8,'exposure_Gain_8'),
-                                                     (exposure_Gain_32,'exposure_Gain_32'),
+                                                     (exposure_Gain_30,'exposure_Gain_30'),
                                                      (exposure_Gain_14,'exposure_Gain_14')])
     def test_visca_exposure_Gain(self, exposure_Gain,title):
         test_reslut = PT.Visca().visca_exposure_Gain(exposure_Gain)
@@ -444,7 +445,7 @@ class Test_visca():
     # 2D降噪测试
     @pytest.mark.parametrize('CAM_2DNR,title',[(CAM_2DNR_1,'CAM_2DNR_1'),
                                                (CAM_2DNR_2,'CAM_2DNR_2'),
-                                               (CAM_2DNR_7,'CAM_2DNR_7')])
+                                               (CAM_2DNR_3,'CAM_2DNR_3')])
     def test_visca_2DNR(self, CAM_2DNR,title):
         test_reslut = PT.Visca().visca_2DNR(CAM_2DNR)
         assert test_reslut == True
@@ -454,7 +455,7 @@ class Test_visca():
     # 3D降噪测试
     @pytest.mark.parametrize('CAM_3DNR,title',[(CAM_3DNR_1,'CAM_3DNR_1'),
                                                (CAM_3DNR_2,'CAM_3DNR_2'),
-                                               (CAM_3DNR_7,'CAM_3DNR_7')])
+                                               (CAM_3DNR_3,'CAM_3DNR_3')])
     def test_visca_3DNR(self, CAM_3DNR,title):
         test_reslut = PT.Visca().visca_3DNR(CAM_3DNR)
         assert test_reslut == True
@@ -464,7 +465,8 @@ class Test_visca():
     # 预置点设置、调用测试
     @pytest.mark.parametrize('set_value,call_value,clear_value,title',[[set_0,call_0,clear_0,'设置\调用\清除预置点0'],
                                                            [set_1,call_1,clear_1,'设置\调用\清除预置点1'],
-                                                           [set_15,call_15,clear_15,'设置\调用\清除预置点15'],
+                                                           [set_127,call_127,clear_127,'设置\调用\清除预置点127'],
+                                                           [set_128, call_128, clear_128, '设置\调用\清除预置点128'],
                                                            [set_255,call_255,clear_255,'设置\调用\清除预置点255']])
     def test_visca_preset(self,set_value,call_value,clear_value,title):
         test_reslut = PT.Visca().visca_preset(set_value,call_value,clear_value)
@@ -515,20 +517,20 @@ class Test_visca():
         result = PT.Visca().filp()
         assert result == True
 
-    @allure.story("抗闪烁开关测试")
-    def test_flicker(self):
-        result = PT.Visca().anti_flicker()
-        assert result == True
+    # @allure.story("抗闪烁开关测试")
+    # def test_flicker(self):
+    #     result = PT.Visca().anti_flicker()
+    #     assert result == True
 
     @allure.story("gamma测试")
     def test_gamma(self):
         result = PT.Visca().gamma()
         assert result == True
 
-    @allure.story("色温调节测试")
-    def test_Color_Temperature(self):
-        result = PT.Visca().Color_Temperature()
-        assert result == True
+    # @allure.story("色温调节测试")
+    # def test_Color_Temperature(self):
+    #     result = PT.Visca().Color_Temperature()
+    #     assert result == True
 
     @allure.story("图像锐度调节测试")
     def test_CAM_Sharpness(self):
@@ -586,20 +588,20 @@ class Test_visca():
     @allure.story("视频格式切换测试")
     @allure.title("视频格式切换测试 -{title}")
     # 视频格式切换测试
-    @pytest.mark.parametrize('value,result,title', [[video_format_1080p60, video_format_return_list[0], '1080p60'],
-                                                    [video_format_1080p30, video_format_return_list[1], '1080p30'],
-                                                    [video_format_1080i60, video_format_return_list[2], '1080i60'],
-                                                    [video_format_720p60, video_format_return_list[3], '720p60'],
-                                                    [video_format_720p30, video_format_return_list[4], '720p30'],
-                                                    [video_format_4kp60, video_format_return_list[5], '4kp60'],
-                                                    [video_format_4kp30, video_format_return_list[6], '4kp30'],
-                                                    [video_format_1080p50, video_format_return_list[7], '1080p50'],
-                                                    [video_format_1080p25, video_format_return_list[8], '1080p25'],
-                                                    [video_format_1080i50, video_format_return_list[9], '1080i50'],
-                                                    [video_format_720p50, video_format_return_list[10], '720p50'],
-                                                    [video_format_720p25, video_format_return_list[11], '720p25'],
-                                                    [video_format_4Kp50, video_format_return_list[12], '4Kp50'],
-                                                    [video_format_4Kp25, video_format_return_list[13], '4Kp25']
+    @pytest.mark.parametrize('value,result,title', [[video_format_1080p60, video_format_return_list[7], '1080p60'],
+                                                    [video_format_1080p30, video_format_return_list[10], '1080p30'],
+                                                    # [video_format_1080i60, video_format_return_list[2], '1080i60'],
+                                                    [video_format_720p60, video_format_return_list[13], '720p60'],
+                                                    # [video_format_720p30, video_format_return_list[4], '720p30'],
+                                                    # [video_format_4kp60, video_format_return_list[5], '4kp60'],
+                                                    # [video_format_4kp30, video_format_return_list[6], '4kp30'],
+                                                    [video_format_1080p50, video_format_return_list[9], '1080p50'],
+                                                    [video_format_1080p25, video_format_return_list[12], '1080p25'],
+                                                    # [video_format_1080i50, video_format_return_list[9], '1080i50'],
+                                                    [video_format_720p50, video_format_return_list[15], '720p50'],
+                                                    # [video_format_720p25, video_format_return_list[11], '720p25'],
+                                                    # [video_format_4Kp50, video_format_return_list[12], '4Kp50'],
+                                                    # [video_format_4Kp25, video_format_return_list[13], '4Kp25']
                                                     ])
     def test_visca_video_format(self, value, result, title):
         test_reslut = PT.Visca().Visca_video_format(value, result)

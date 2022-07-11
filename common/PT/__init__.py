@@ -23,11 +23,11 @@ zoom_position_0000 = [0X81, 0x01, 0x04, 0x47, 0x00, 0x00, 0x00, 0x00, 0xff]     
 zoom_stop = [0X81, 0x01, 0x04, 0x07, 0x00, 0xff]
 Dzoom_stus_qurie = [0X81, 0x09, 0x04, 0x06, 0xff]
 Dzoom_qurie = [0X81, 0x09, 0x04, 0x26, 0xff]
-Dzoom_on = [0X81, 0x01, 0x04, 0x06, 0x02, 0xff]
-Dzoom_off = [0X81, 0x01, 0x04, 0x06, 0x03, 0xff]
+# Dzoom_on = [0X81, 0x01, 0x04, 0x06, 0x02, 0xff]
+# Dzoom_off = [0X81, 0x01, 0x04, 0x06, 0x03, 0xff]
 Dzoom_x1 = [0X81, 0x01, 0x04, 0x26, 0x00, 0xff]
-Dzoom_x4 = [0X81, 0x01, 0x04, 0x26, 0x03, 0xff]
 Dzoom_x8 = [0X81, 0x01, 0x04, 0x26, 0x07, 0xff]
+Dzoom_x12 = [0X81, 0x01, 0x04, 0x26, 0x0b, 0xff]
 zoom0000_focus3bdf = [0X81, 0x01, 0x04, 0x47,0x00,0x00,0x00,0x00,0x03,0x0b,0x0d,0x0f, 0xff]
 zoom2000_focus4000 = [0X81, 0x01, 0x04, 0x47,0x02,0x00,0x00,0x00,0x04,0x00,0x00,0x00, 0xff]
 zoom4000_focus4280 = [0X81, 0x01, 0x04, 0x47,0x04,0x00,0x00,0x00,0x04,0x02,0x08,0x00, 0xff]
@@ -62,11 +62,11 @@ WB_one_push_trigger = [0x81, 0x01, 0x04, 0x10, 0x05, 0xFF]                      
 # data_coordinate42 = [0x81, 0x01, 0x04, 0x35, 0x06, 0xFF]                                                   # 白平衡白炽灯
 # data_coordinate43 = [0x81, 0x01, 0x04, 0x35, 0x07, 0xFF]                                                   # 白平衡闪光灯
 
-Color_Temperature = [0x81, 0x01, 0x04, 0x35, 0x0b, 0xFF]
-CAM_WB_Color_Temperature_quire = [0x81, 0x09, 0x0e, 0x24, 0x49, 0xFF]
-CAM_WB_Color_Temperature_0 = [0x81, 0x01, 0x0e, 0x24, 0x49, 0x00, 0x00, 0xFF]
-CAM_WB_Color_Temperature_11 = [0x81, 0x01, 0x0e, 0x24, 0x49, 0x01, 0x01, 0xFF]
-CAM_WB_Color_Temperature_25 = [0x81, 0x01, 0x0e, 0x24, 0x49, 0x02, 0x05, 0xFF]
+# Color_Temperature = [0x81, 0x01, 0x04, 0x35, 0x0b, 0xFF]
+# CAM_WB_Color_Temperature_quire = [0x81, 0x09, 0x0e, 0x24, 0x49, 0xFF]
+# CAM_WB_Color_Temperature_0 = [0x81, 0x01, 0x0e, 0x24, 0x49, 0x00, 0x00, 0xFF]
+# CAM_WB_Color_Temperature_11 = [0x81, 0x01, 0x0e, 0x24, 0x49, 0x01, 0x01, 0xFF]
+# CAM_WB_Color_Temperature_25 = [0x81, 0x01, 0x0e, 0x24, 0x49, 0x02, 0x05, 0xFF]
 
 WB_R_Gain_default = [0x81, 0x01, 0x04, 0x03, 0x00, 0xFF]                                                     # 白平衡 RGAIN恢复默认
 WB_R_Gain_up= [0x81, 0x01, 0x04, 0x03, 0x02, 0xFF]                                                      # 白平衡 R增益向上调节
@@ -114,7 +114,7 @@ exposure_shutter_default = [0x81, 0x01, 0x04, 0x0A, 0x00,0xFF]                  
 exposure_shutter_up = [0x81, 0x01, 0x04, 0x0A, 0x02, 0xFF]                                                     # 快门数值向上调整
 exposure_shutter_down = [0x81, 0x01, 0x04, 0x0A, 0x03, 0xFF]                                                     # 快门数值向下调整
 exposure_shutter_Quire = [0x81, 0x09, 0x04, 0x4A, 0xFF]                                                           #快门数值查询
-exposure_shutter_6 = [0x81, 0x01, 0x04, 0x4A,0x00, 0x00,0x00,0x06,0xFF]                                       # 快门直接调整到：1/60
+exposure_shutter_6 = [0x81, 0x01, 0x04, 0x4A,0x00, 0x00,0x00,0x0F,0xFF]                                       # 快门直接调整到：1/60
 exposure_shutter_1_90 = [0x81, 0x01, 0x04, 0x4A,0x00, 0x00,0x00,0x07,0xFF]
 
 exposure_iris_Quire = [0x81, 0x09, 0x04, 0x4B, 0xFF]                                                            #光圈数值查询
@@ -158,11 +158,11 @@ BackLight_Quire= [0x81, 0x09, 0x04, 0x33, 0xFF]                                 
 BackLight_on= [0x81, 0x01, 0x04, 0x33, 0x02, 0xFF]                                                       #背光补偿打开
 BackLight_off= [0x81, 0x01, 0x04, 0x33, 0x03, 0xFF]                                                       #背光补偿关闭
 
-WDR_Quire =[0x81, 0x09, 0x04, 0x3D, 0xFF]                    #宽动态查询
-WDR_5 =[0x81, 0x01, 0x04, 0x3D, 0x05, 0xFF]                  #宽动态5
-WDR_2 =[0x81, 0x01, 0x04, 0x3D, 0x02, 0xFF]                  #宽动态2
-WDR_1 =[0x81, 0x01, 0x04, 0x3D, 0x01, 0xFF]                  #宽动态1
-WDR_OFF =[0x81, 0x01, 0x04, 0x3D, 0x00, 0xFF]                #宽动态关闭
+WDR_Quire =[0x81, 0x09, 0x04, 0x2D, 0xFF]                    #宽动态查询
+WDR_3 =[0x81, 0x01, 0x04, 0x2D, 0x03, 0xFF]                  #宽动态3
+WDR_2 =[0x81, 0x01, 0x04, 0x2D, 0x02, 0xFF]                  #宽动态2
+WDR_1 =[0x81, 0x01, 0x04, 0x2D, 0x01, 0xFF]                  #宽动态1
+WDR_OFF =[0x81, 0x01, 0x04, 0x2D, 0x00, 0xFF]                #宽动态关闭
 
 Sharpness_default=[0x81, 0x01, 0x04, 0x02, 0x00, 0xFF]             #锐度值恢复默认值
 Sharpness_up=[0x81, 0x01, 0x04, 0x02, 0x02, 0xFF]                  #锐度值增加
@@ -221,17 +221,19 @@ IR_off = [0x81, 0x01, 0x06, 0x08, 0x03, 0xFF]                                   
 IR_on_off = [0x81, 0x01, 0x06, 0x08, 0x10, 0xFF]                                               #
 IR_quire = [0x81, 0x09, 0x06, 0x08, 0xFF]                                               #
 
+audio_mode_on = [0x81, 0x01, 0x04, 0x68, 0x02, 0xFF]
+audio_mode_off = [0x81, 0x01, 0x04, 0x68, 0x03, 0xFF]
 audio_volume_quire = [0x81, 0x09, 0x04, 0x6e, 0xFF]
-audio_volume_reset = [0x81, 0x01, 0x04, 0x6e, 0x00, 0xFF]
-audio_volume_up = [0x81, 0x01, 0x04, 0x6e, 0x02, 0xFF]
-audio_volume_down = [0x81, 0x01, 0x04, 0x6e, 0x03, 0xFF]
+# audio_volume_reset = [0x81, 0x01, 0x04, 0x6e, 0x00, 0xFF]
+# audio_volume_up = [0x81, 0x01, 0x04, 0x6e, 0x02, 0xFF]
+# audio_volume_down = [0x81, 0x01, 0x04, 0x6e, 0x03, 0xFF]
 audio_volume_00 = [0x81, 0x01, 0x04, 0x6e, 0x01, 0x00, 0x00, 0xFF]
-audio_volume_33 = [0x81, 0x01, 0x04, 0x6e, 0x01, 0x03, 0x03, 0xFF]
-audio_volume_64 = [0x81, 0x01, 0x04, 0x6e, 0x01, 0x06, 0x04, 0xFF]
+audio_volume_03 = [0x81, 0x01, 0x04, 0x6e, 0x01, 0x00, 0x03, 0xFF]
+audio_volume_08 = [0x81, 0x01, 0x04, 0x6e, 0x01, 0x00, 0x08, 0xFF]
 
-IP_DHCP_quire = [0x81, 0x09, 0x08, 0x08, 0xFF]
-IP_DHCP_on = [0x81, 0x01, 0x08, 0x08, 0x02, 0xFF]
-IP_DHCP_off = [0x81, 0x01, 0x08, 0x08, 0x03, 0xFF]
+IP_DHCP_quire = [0x81, 0x09, 0x7c, 0x01, 0xFF]
+IP_DHCP_on = [0x81, 0x01, 0x7c, 0x01, 0x02, 0xFF]
+IP_DHCP_off = [0x81, 0x01, 0x7c, 0x01, 0x03, 0xFF]
 
 mirror_quire = [0x81, 0x09, 0x04, 0x61, 0xFF]
 mirror_on = [0x81, 0x01, 0x04, 0x61, 0x02, 0xFF]
@@ -249,20 +251,20 @@ anti_flicker_60Hz = [0x81, 0x01, 0x04, 0x3a, 0x02, 0xFF]
 gamma_quire = [0x81, 0x09, 0x04, 0x5b, 0xFF]
 gamma_0 = [0x81, 0x01, 0x04, 0x5b, 0x00, 0xFF]
 gamma_1 = [0x81, 0x01, 0x04, 0x5b, 0x01, 0xFF]
-gamma_4 = [0x81, 0x01, 0x04, 0x5b, 0x04, 0xFF]
+gamma_3 = [0x81, 0x01, 0x04, 0x5b, 0x03, 0xFF]
 
 menu_factory = [0x81, 0x01, 0x04, 0x3f, 0x03, 0x00, 0xFF]
 
 set_IP = [0x81, 0x01, 0x08, 0x07, 0x09,  0xFF]
 
-IP_address_quire = [0x81, 0x09, 0x08, 0x07, 0x01, 0xFF]
-set_IP_address_10_0_8_241 = [0x81, 0x01, 0x08, 0x07, 0x01, 0x00, 0x0a, 0x00, 0x00, 0x00, 0x08, 0x0f, 0x01, 0xFF]
-set_IP_address_1_0_0_0 = [0x81, 0x01, 0x08, 0x07, 0x01, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF]
-set_IP_address_255_255_255_255 = [0x81, 0x01, 0x08, 0x07, 0x01, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0xFF]
+IP_address_quire = [0x81, 0x09, 0x7c, 0x02, 0xFF]
+set_IP_address_10_0_8_241 = [0x81, 0x01, 0x7c, 0x02, 0x00, 0x0a, 0x00, 0x00, 0x00, 0x08, 0x0f, 0x01, 0xFF]
+set_IP_address_1_0_0_0 = [0x81, 0x01, 0x7c, 0x02,0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF]
+set_IP_address_255_255_255_255 = [0x81, 0x01, 0x7c, 0x02,0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0xFF]
 
-IP_mask_quire = [0x81, 0x09, 0x08, 0x07, 0x02, 0xFF]
+IP_mask_quire = [0x81, 0x09, 0x7c, 0x03, 0xFF]
 
-IP_gateway_quire = [0x81, 0x09, 0x08, 0x07, 0x03, 0xFF]
+IP_gateway_quire = [0x81, 0x09, 0x7c, 0x04, 0xFF]
 
 CAM_Sharpness_quire = [0x81, 0x09, 0x0e, 0x24, 0x40, 0xFF]
 CAM_Sharpness_0 = [0x81, 0x01, 0x0e, 0x24, 0x40, 0x00, 0x00, 0xFF]
@@ -308,7 +310,7 @@ class Visca():
         time.sleep(20)
         power2 = port.send(power_quire)
         power2 = port.send(power_quire)
-        print(power1,power2)
+        print(power1, power2)
         port.send(power_on)
         time.sleep(20)
         port.send(PT_Home)
@@ -341,40 +343,40 @@ class Visca():
         focus3 = port.send(Focus_Quire)
         focus3 = port.send(Focus_Quire)
         time.sleep(2)
-        print('zoom1',zoom1)
-        print('zoom2',zoom2)
-        print('zoom3',zoom3)
-        print('focus1',focus1)
-        print('focus2',focus2)
-        print('focus3',focus3)
+        print('zoom1', zoom1)
+        print('zoom2', zoom2)
+        print('zoom3', zoom3)
+        print('focus1', focus1)
+        print('focus2', focus2)
+        print('focus3', focus3)
         if zoom1 != zoom2 and zoom2 != zoom3 and zoom1 != zoom3 and focus1 != focus2 and focus1 != focus3 and focus3 != focus2:
             return True
         else:
             return False
 
     def visca_Dzoom(self):
-        port.send(Dzoom_on)
-        Dzoom1 = port.send(Dzoom_stus_qurie)
-        Dzoom1 = port.send(Dzoom_stus_qurie)
-        port.send(Dzoom_off)
-        Dzoom2 = port.send(Dzoom_stus_qurie)
-        Dzoom2 = port.send(Dzoom_stus_qurie)
-        port.send(Dzoom_on)
+        # port.send(Dzoom_on)
+        # Dzoom1 = port.send(Dzoom_stus_qurie)
+        # Dzoom1 = port.send(Dzoom_stus_qurie)
+        # port.send(Dzoom_off)
+        # Dzoom2 = port.send(Dzoom_stus_qurie)
+        # Dzoom2 = port.send(Dzoom_stus_qurie)
+        # port.send(Dzoom_on)
         port.send(Dzoom_x1)
         Dzoom3 = port.send(Dzoom_qurie)
         Dzoom3 = port.send(Dzoom_qurie)
-        port.send(Dzoom_x4)
-        Dzoom4 = port.send(Dzoom_qurie)
-        Dzoom4 = port.send(Dzoom_qurie)
         port.send(Dzoom_x8)
+        Dzoom4 = port.send(Dzoom_qurie)
+        Dzoom4 = port.send(Dzoom_qurie)
+        port.send(Dzoom_x12)
         Dzoom5 = port.send(Dzoom_qurie)
         Dzoom5 = port.send(Dzoom_qurie)
-        print('Dzoom1',Dzoom1)
-        print('Dzoom2',Dzoom2)
+        # print('Dzoom1',Dzoom1)
+        # print('Dzoom2',Dzoom2)
         print('Dzoom3',Dzoom3)
         print('Dzoom4',Dzoom4)
         print('Dzoom5',Dzoom5)
-        if Dzoom1 != Dzoom2 and Dzoom3 != Dzoom4 and Dzoom4!=Dzoom5 and Dzoom3!=Dzoom5:
+        if Dzoom3 ==['0x90', '0x50', '0x0', '0xff'] and Dzoom4 ==['0x90', '0x50', '0x7', '0xff'] and Dzoom5 == ['0x90','0x50','0xb','0xff']:
             return True
         else:
             return False
@@ -418,11 +420,12 @@ class Visca():
         time.sleep(2)
         focus2 = port.send(Focus_Quire)
         focus2 = port.send(Focus_Quire)
+        print('focus2', focus2)
         port.send(focus_auto)
 
         time.sleep(2)
-        focus4 = port.send(Focus_Quire)
-        focus4 = port.send(Focus_Quire)
+        focus4 = port.send(Focus_mode_Quire)
+        focus4 = port.send(Focus_mode_Quire)
         port.send(focus_value)
         time.sleep(2)
         port.send(focus_stop)
@@ -430,7 +433,6 @@ class Visca():
         focus3 = port.send(Focus_Quire)
         focus3 = port.send(Focus_Quire)
         time.sleep(1)
-        print('focus2',focus2)
         print('自动聚焦：')
         print('focus4',focus4)
         print('focus3',focus3)
@@ -446,12 +448,12 @@ class Visca():
         focus7 = port.send(Focus_mode_Quire)
         focus7 = port.send(Focus_mode_Quire)
         # print(focus5)
-        print('focus5',focus5)
-        print('focus6',focus6)
-        print('focus7',focus7)
+        print('focus5', focus5)
+        print('focus6', focus6)
+        print('focus7', focus7)
 
 
-        if focus1 != focus2 and focus3 == focus4 and focus6!=focus7 and focus5 == True:
+        if focus1 != focus2 and focus4 == ['0x90', '0x50', '0x2', '0xff'] and focus6!=focus7 and focus5 == True:
             return True
         else:
             return False
@@ -523,6 +525,7 @@ class Visca():
         # time.sleep(4)
 
         t = port.check(6,WB_one_push_trigger)
+        t = port.check(6, WB_one_push_trigger)
         if t == True:
             return True
         else:
@@ -576,31 +579,31 @@ class Visca():
         else:
             return False
 
-    # 色温调节
-    def Color_Temperature(self):
-        port.send(Color_Temperature)
-        port.send(CAM_WB_Color_Temperature_0)
-        port.send(CAM_WB_Color_Temperature_quire)
-        r1 = port.send(CAM_WB_Color_Temperature_quire)
-        r1 = port.send(CAM_WB_Color_Temperature_quire)
-        r1 = port.send(CAM_WB_Color_Temperature_quire)
-        port.send(CAM_WB_Color_Temperature_11)
-        port.send(CAM_WB_Color_Temperature_quire)
-        r2 = port.send(CAM_WB_Color_Temperature_quire)
-        r2 = port.send(CAM_WB_Color_Temperature_quire)
-        r2 = port.send(CAM_WB_Color_Temperature_quire)
-        port.send(CAM_WB_Color_Temperature_25)
-        port.send(CAM_WB_Color_Temperature_quire)
-        r3 = port.send(CAM_WB_Color_Temperature_quire)
-        r3 = port.send(CAM_WB_Color_Temperature_quire)
-        r3 = port.send(CAM_WB_Color_Temperature_quire)
-        print(r1)
-        print(r2)
-        print(r3)
-        if r1 != r2 and r3 != r2 and r1 != r3:
-            return True
-        else:
-            return False
+    # # 色温调节
+    # def Color_Temperature(self):
+    #     port.send(Color_Temperature)
+    #     port.send(CAM_WB_Color_Temperature_0)
+    #     port.send(CAM_WB_Color_Temperature_quire)
+    #     r1 = port.send(CAM_WB_Color_Temperature_quire)
+    #     r1 = port.send(CAM_WB_Color_Temperature_quire)
+    #     r1 = port.send(CAM_WB_Color_Temperature_quire)
+    #     port.send(CAM_WB_Color_Temperature_11)
+    #     port.send(CAM_WB_Color_Temperature_quire)
+    #     r2 = port.send(CAM_WB_Color_Temperature_quire)
+    #     r2 = port.send(CAM_WB_Color_Temperature_quire)
+    #     r2 = port.send(CAM_WB_Color_Temperature_quire)
+    #     port.send(CAM_WB_Color_Temperature_25)
+    #     port.send(CAM_WB_Color_Temperature_quire)
+    #     r3 = port.send(CAM_WB_Color_Temperature_quire)
+    #     r3 = port.send(CAM_WB_Color_Temperature_quire)
+    #     r3 = port.send(CAM_WB_Color_Temperature_quire)
+    #     print(r1)
+    #     print(r2)
+    #     print(r3)
+    #     if r1 != r2 and r3 != r2 and r1 != r3:
+    #         return True
+    #     else:
+    #         return False
         # 自动白平衡绿色增益
 
     def AWB_GGain(self):
@@ -676,7 +679,7 @@ class Visca():
         print(s1)
         print(s2)
         print(s3)
-        if s1 != s2 and s2 != s3 and s1 == s3:
+        if s1 != s2 and s1 == s3:
             return True
         else:
             return False
@@ -713,7 +716,7 @@ class Visca():
 
     #     亮度调节
     def visca_exposure_bright(self,bright_value):
-        port.send(exposure_bright)
+        port.send(Image_Mode_Custom)
         port.send(exposure_bright_default)
         time.sleep(1)
         s1 = port.send(exposure_bright_Qurie)
@@ -733,7 +736,7 @@ class Visca():
         print('亮度1：',s1)
         print('亮度2：',s2)
         print('亮度3：',s3)
-        if s1 != s2 and s2 != s3 and s1 == s3:
+        if s1 != s2 and s1 == s3:
             return True
         else:
             return False
@@ -744,24 +747,28 @@ class Visca():
         time.sleep(1)
         port.send(ExpComp_default)
         time.sleep(1)
-        s3 = port.send(ExpComp_status_quire)
-        s3 = port.send(ExpComp_status_quire)
-        s3 = port.send(ExpComp_status_quire)
+        # s3 = port.send(ExpComp_status_quire)
+        # s3 = port.send(ExpComp_status_quire)
+        # s3 = port.send(ExpComp_status_quire)    # 状态为on
         port.send(ExpComp_on)
         time.sleep(1)
         s1 = port.send(ExpComp_status_quire)
         s1 = port.send(ExpComp_status_quire)
-        s1 = port.send(ExpComp_status_quire)
+        s1 = port.send(ExpComp_status_quire)    # 状态为on
         port.send(ExpComp_off)
         time.sleep(1)
         s2 = port.send(ExpComp_status_quire)
         s2 = port.send(ExpComp_status_quire)
-        s2 = port.send(ExpComp_status_quire)
+        s2 = port.send(ExpComp_status_quire)    # 状态为off
         port.send(ExpComp_on)
+        time.sleep(1)
+        s3 = port.send(ExpComp_status_quire)
+        s3 = port.send(ExpComp_status_quire)
+        s3 = port.send(ExpComp_status_quire)  # 状态为on
         print(s1)
         print(s2)
         print(s3)
-        if s2 != s3 and s2 != s1:
+        if s2 != s1 and s2 != s3:
             return True
         else:
             return False
@@ -826,7 +833,7 @@ class Visca():
 
     #     宽动态
     def visca_WDR(self):
-        port.send(WDR_5)
+        port.send(WDR_3)
         w1 = port.send(WDR_Quire)
         w1 = port.send(WDR_Quire)
         port.send(WDR_2)
@@ -838,7 +845,7 @@ class Visca():
         port.send(WDR_OFF)
         w4 = port.send(WDR_Quire)
         w4 = port.send(WDR_Quire)
-        if w1 != w2 and w3 != w4 and w1 != w3 and w2 != w4 and w1 != w4 and w2 != w1:
+        if w1 != w2 and w3 != w4 and w1 != w3 and w2 != w4 and w1 != w4:
             return True
         else:
             return False
@@ -911,14 +918,17 @@ class Visca():
         print(P1)
         print(P2)
         port.send(PT_Home)
+        time.sleep(10)
         P3 = port.send(PT_Quire)
         P3 = port.send(PT_Quire)
         time.sleep(2)
         port.send(clear_value)
         port.send(call_value)
+        time.sleep(10)
         P4 = port.send(PT_Quire)
         P4 = port.send(PT_Quire)
-        if P1 == P2 and P3 == P4 :
+        print(P4)
+        if P1 == P2 and P4 == P3:
             return True
         else:
             return False
@@ -950,7 +960,7 @@ class Visca():
     #     视频格式
     def Visca_video_format(self,value,result):
         port.send(value)
-        time.sleep(30)
+        time.sleep(40)
         port.send(video_format_quire)
         port.send(video_format_quire)
         port.send(video_format_quire)
@@ -969,7 +979,7 @@ class Visca():
         else:
             return False
 
-    # 红外地址
+    # 红外地址状态
     def Visca_IR_Receive(self):
         port.send(IR_on)
         i1 = port.send(IR_quire)
@@ -983,31 +993,37 @@ class Visca():
         port.send(IR_on_off)
         i4 = port.send(IR_quire)
         i4 = port.send(IR_quire)
-        if i1 != i2 and i3 != i4 and i3 != i2:
+        if i1 != i2 and i3 != i4:
             return True
         else:
             return False
 
     #音量
     def audio_volume(self):
-        port.send(audio_volume_reset)
-        v1 = port.send(audio_volume_quire)
-        v1 = port.send(audio_volume_quire)
-        port.send(audio_volume_up)
-        v2 = port.send(audio_volume_quire)
-        v2 = port.send(audio_volume_quire)
-        port.send(audio_volume_down)
-        v3 = port.send(audio_volume_quire)
-        v3 = port.send(audio_volume_quire)
+        port.send(audio_mode_on)
+        # port.send(audio_volume_reset)
+        # v1 = port.send(audio_volume_quire)  # 6
+        # v1 = port.send(audio_volume_quire)
+        # port.send(audio_volume_up)
+        # v2 = port.send(audio_volume_quire)  # 7
+        # v2 = port.send(audio_volume_quire)
+        # port.send(audio_volume_down)
+        # v3 = port.send(audio_volume_quire)  # 6
+        # v3 = port.send(audio_volume_quire)
         port.send(audio_volume_00)
+        time.sleep(1)
+        v4 = port.send(audio_volume_quire)  # 0
         v4 = port.send(audio_volume_quire)
-        v4 = port.send(audio_volume_quire)
-        port.send(audio_volume_33)
+        port.send(audio_volume_03)
+        time.sleep(1)
+        v5 = port.send(audio_volume_quire)  # 3
         v5 = port.send(audio_volume_quire)
-        v5 = port.send(audio_volume_quire)
-        port.send(audio_volume_up)
-        v6 = port.send(audio_volume_64)
-        if v1 != v2 and v3 != v2 and v4 != v3 and v5 != v4 and v6 != v5:
+        # port.send(audio_volume_up)
+        port.send(audio_volume_08)     # 8
+        time.sleep(1)
+        v6 = port.send(audio_volume_quire)
+        v6 = port.send(audio_volume_quire)
+        if v4 != v6 and v5 != v4 and v6 != v5:
             return True
         else:
             return False
@@ -1015,12 +1031,21 @@ class Visca():
     #  动态IP
     def IP_DHCP(self):
         port.send(IP_DHCP_on)
+        time.sleep(5)
         p1 = port.send(IP_DHCP_quire)
         p1 = port.send(IP_DHCP_quire)
         port.send(IP_DHCP_off)
+        time.sleep(5)
         p2 = port.send(IP_DHCP_quire)
         p2 = port.send(IP_DHCP_quire)
-        if p1 != p2:
+        port.send(IP_DHCP_on)
+        time.sleep(5)
+        p3 = port.send(IP_DHCP_quire)
+        p3 = port.send(IP_DHCP_quire)
+        print('on', p1)
+        print('off', p2)
+        print('on', p3)
+        if p1 != p2 and p2 != p3:
             return True
         else:
             return False
@@ -1052,34 +1077,35 @@ class Visca():
             return False
 
     # 抗闪烁
-    def anti_flicker(self):
-        port.send(exposure_auto)
-        port.send(anti_flicker_off)
-        p1 = port.send(anti_flicker_quire)
-        p1 = port.send(anti_flicker_quire)
-        port.send(anti_flicker_50Hz)
-        p2 = port.send(anti_flicker_quire)
-        p2 = port.send(anti_flicker_quire)
-        port.send(anti_flicker_60Hz)
-        p3 = port.send(anti_flicker_quire)
-        p3 = port.send(anti_flicker_quire)
-        print('关闭',p1)
-        print('50Hz',p2)
-        print('60Hz',p3)
-        if p1 != p2 and p2 != p3 and p1 != p3 :
-            return True
-        else:
-            return False
+    # def anti_flicker(self):
+    #     port.send(exposure_auto)
+    #     port.send(anti_flicker_off)
+    #     p1 = port.send(anti_flicker_quire)
+    #     p1 = port.send(anti_flicker_quire)
+    #     port.send(anti_flicker_50Hz)
+    #     p2 = port.send(anti_flicker_quire)
+    #     p2 = port.send(anti_flicker_quire)
+    #     port.send(anti_flicker_60Hz)
+    #     p3 = port.send(anti_flicker_quire)
+    #     p3 = port.send(anti_flicker_quire)
+    #     print('关闭',p1)
+    #     print('50Hz',p2)
+    #     print('60Hz',p3)
+    #     if p1 != p2 and p2 != p3 and p1 != p3 :
+    #         return True
+    #     else:
+    #         return False
 
     # 伽马
     def gamma(self):
+        port.send(Image_Mode_Custom)
         port.send(gamma_0)
         p1 = port.send(gamma_quire)
         p1 = port.send(gamma_quire)
         port.send(gamma_1)
         p2 = port.send(gamma_quire)
         p2 = port.send(gamma_quire)
-        port.send(gamma_4)
+        port.send(gamma_3)
         p3 = port.send(gamma_quire)
         p3 = port.send(gamma_quire)
         if p1 != p2 and p2 != p3 and p1 != p3 :
@@ -1088,8 +1114,9 @@ class Visca():
             return False
 
     # IP地址设置
-    def set_IP_address(self,value):
-
+    def set_IP_address(self, value):
+        port.send(IP_DHCP_off)
+        time.sleep(3)
         p1 = port.send(IP_address_quire)
         p1 = port.send(IP_address_quire)
         port.send(value)
@@ -1098,7 +1125,6 @@ class Visca():
         p2 = port.send(IP_address_quire)
         print('IP地址1',p1)
         print('IP地址2',p2)
-
         if p1 != p2:
             return True
         else:
@@ -1106,7 +1132,7 @@ class Visca():
 
     # IP子网掩码设置
     def set_IP_mask(self,value):
-
+        port.send(IP_DHCP_off)
         p1 = port.send(IP_mask_quire)
         p1 = port.send(IP_mask_quire)
         time.sleep(1)
@@ -1123,7 +1149,7 @@ class Visca():
             return False
 
     def IP_mask(self,value):
-
+        port.send(IP_DHCP_off)
         p1 = port.send(IP_mask_quire)
         p1 = port.send(IP_mask_quire)
         port.send(value)
@@ -1138,7 +1164,7 @@ class Visca():
 
     # IP网关设置
     def set_IP_gateway(self,value):
-
+        port.send(IP_DHCP_off)
         p1 = port.send(IP_gateway_quire)
         p1 = port.send(IP_gateway_quire)
         port.send(value)
